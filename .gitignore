@@ -1,0 +1,17 @@
+# .gitignore
+
+# Byte-compiled / optimized / C extensions
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables
+.env
+
+
+
+# IDE / Editor specific files
+.vscode/
+.idea/
+*.swp

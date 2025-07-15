@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Persona: {{ persona.username }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FF4500; /* Reddit Orange */
+            --secondary-color: #F6F7F8;
+            --text-color: #1c1c1c;
+            --border-color: #ddd;
+            --slider-bg: #e9ecef;
+            --slider-thumb: #343a40;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f8f9fa;
+            color: var(--text-color);
+            margin: 0;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 3rem;
+        }
+        .left-column {
+            display: flex;
+            flex-direction: column;
+        }
+        .right-column {
+            padding-left: 1rem;
+        }
+        .profile-pic {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .quote-box {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+            margin-top: -50px;
+            position: relative;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.4);
+        }
+        h1, h2, h3 {
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 4px solid var(--primary-color);
+            display: inline-block;
+        }
+        h2 {
+            font-size: 1rem;
+            color: #888;
+            margin-top: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .basic-info ul {
+            list-style: none;
+            padding: 0;
+        }
+        .basic-info li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+        .basic-info strong {
+            text-transform: uppercase;
+            color: #555;
+        }
+        .tag-container {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .tag {
+            background: var(--secondary-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .bar-chart, .slider {
+            list-style: none;
+            padding: 0;
+        }
+        .bar-chart li, .slider li {
+            margin-bottom: 1.2rem;
+        }
+        .bar-container {
+            height: 10px;
+            background: var(--slider-bg);
+            border-radius: 5px;
+            width: 100%;
+        }
+        .bar-fill {
+            height: 100%;
+            background: var(--slider-thumb);
+            border-radius: 5px;
+        }
+        .slider-container {
+            height: 6px;
+            background: var(--slider-bg);
+            border-radius: 3px;
+            position: relative;
+        }
+        .slider-thumb {
+            width: 16px;
+            height: 16px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 0.25rem;
+        }
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .list li strong {
+            color: var(--text-color);
+            font-weight: 700;
+        }
+        @media (max-width: 992px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .right-column {
+                padding-left: 0;
+            }
+        }
+        @media (max-width: 768px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <img src="{{ persona.image_url }}" alt="Profile Picture for {{ persona.username }}" class="profile-pic">
+            <div class="quote-box">
+                "{{ persona.summary }}"
+            </div>
+        </div>
+        <div class="right-column">
+            <h1>{{ persona.username }}</h1>
+            <div class="basic-info">
+                <ul>
+                    {% for key, value in persona.basic_info.items() %}
+                    <li><strong>{{ key }}</strong> <span>{{ value }}</span></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="tag-container">
+                <div class="tag">Practical</div>
+                <div class="tag">Adaptable</div>
+                <div class="tag">Spontaneous</div>
+            </div>
+
+            <div class="grid-layout">
+                <div>
+                    <h2>Motivations</h2>
+                    <ul class="bar-chart">
+                        {% for key, value in persona.motivations.items() %}
+                        <li>
+                            <span>{{ key }}</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: {{ value }}%;"></div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div>
+                    <h2>Personality</h2>
+                    <ul class="slider">
+                        {% for key, value in persona.personality.items() %}
+                        <li>
+                            <div class="slider-labels">
+                                <span>{{ key.split('/')[0] }}</span>
+                                <span>{{ key.split('/')[1] }}</span>
+                            </div>
+                            <div class="slider-container">
+                                <div class="slider-thumb" style="left: calc({{ value }}% - 8px);"></div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid-layout">
+                <div class="list">
+                    <h2>Behaviour & Habits</h2>
+                    <ul>
+                        {% for item in persona.habits %}<li>{{ item | safe }}</li>{% endfor %}
+                    </ul>
+                </div>
+                <div class="list">
+                    <h2>Frustrations</h2>
+                    <ul>
+                        {% for item in persona.frustrations %}<li>{{ item | safe }}</li>{% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="list">
+                <h2>Goals & Needs</h2>
+                <ul>
+                    {% for item in persona.goals_needs %}<li>{{ item | safe }}</li>{% endfor %}
+                </ul>
+            </div>
+            
+            <div class="list">
+                <h2>Cited Sources</h2>
+                <ul>
+                    {% for url in persona.sources %}<li><a href="{{ url }}" target="_blank" style="word-break: break-all;">{{ url }}</a></li>{% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

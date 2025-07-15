@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Persona: Hungry-Move-6603</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FF4500; /* Reddit Orange */
+            --secondary-color: #F6F7F8;
+            --text-color: #1c1c1c;
+            --border-color: #ddd;
+            --slider-bg: #e9ecef;
+            --slider-thumb: #343a40;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f8f9fa;
+            color: var(--text-color);
+            margin: 0;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 3rem;
+        }
+        .left-column {
+            display: flex;
+            flex-direction: column;
+        }
+        .right-column {
+            padding-left: 1rem;
+        }
+        .profile-pic {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .quote-box {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+            margin-top: -50px;
+            position: relative;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.4);
+        }
+        h1, h2, h3 {
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 4px solid var(--primary-color);
+            display: inline-block;
+        }
+        h2 {
+            font-size: 1rem;
+            color: #888;
+            margin-top: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .basic-info ul {
+            list-style: none;
+            padding: 0;
+        }
+        .basic-info li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+        .basic-info strong {
+            text-transform: uppercase;
+            color: #555;
+        }
+        .tag-container {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .tag {
+            background: var(--secondary-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .bar-chart, .slider {
+            list-style: none;
+            padding: 0;
+        }
+        .bar-chart li, .slider li {
+            margin-bottom: 1.2rem;
+        }
+        .bar-container {
+            height: 10px;
+            background: var(--slider-bg);
+            border-radius: 5px;
+            width: 100%;
+        }
+        .bar-fill {
+            height: 100%;
+            background: var(--slider-thumb);
+            border-radius: 5px;
+        }
+        .slider-container {
+            height: 6px;
+            background: var(--slider-bg);
+            border-radius: 3px;
+            position: relative;
+        }
+        .slider-thumb {
+            width: 16px;
+            height: 16px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 0.25rem;
+        }
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .list li strong {
+            color: var(--text-color);
+            font-weight: 700;
+        }
+        @media (max-width: 992px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .right-column {
+                padding-left: 0;
+            }
+        }
+        @media (max-width: 768px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <img src="https://styles.redditmedia.com/t5_47n5yc/styles/profileIcon_snoo-nftv2_bmZ0X2VpcDE1NToxMzdfN2Q3YWFmMDNlYTUxYmMxNjU4ZTkzNWE4YWQwOWQ3N2Y4OWExZjI1MF8xNzUzNTU_rare_d1f3aa18-4e55-418e-b6c1-4c375d5b9aad-headshot.png?width=256&amp;height=256&amp;crop=256:256,smart&amp;s=fe94a1e273b732022900fab1cc0bc9a5063da1e5" alt="Profile Picture for Hungry-Move-6603" class="profile-pic">
+            <div class="quote-box">
+                "A pragmatic and health-conscious professional from Delhi, critically observing and adjusting to the cultural and lifestyle differences of his new home in Lucknow."
+            </div>
+        </div>
+        <div class="right-column">
+            <h1>Hungry-Move-6603</h1>
+            <div class="basic-info">
+                <ul>
+                    
+                    <li><strong>Age</strong> <span>25-35</span></li>
+                    
+                    <li><strong>Gender</strong> <span>Male</span></li>
+                    
+                    <li><strong>Location</strong> <span>Lucknow, Uttar Pradesh (originally from Delhi)</span></li>
+                    
+                    <li><strong>Occupation/Field</strong> <span>Business/Entrepreneur</span></li>
+                    
+                    <li><strong>Tech Savviness</strong> <span>Medium  MOTIVATIONS</span></li>
+                    
+                </ul>
+            </div>
+            <div class="tag-container">
+                <div class="tag">Practical</div>
+                <div class="tag">Adaptable</div>
+                <div class="tag">Spontaneous</div>
+            </div>
+
+            <div class="grid-layout">
+                <div>
+                    <h2>Motivations</h2>
+                    <ul class="bar-chart">
+                        
+                        <li>
+                            <span>Convenience</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 80%;"></div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <span>Wellness</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 90%;"></div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <span>Speed</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 75%;"></div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <span>Comfort</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 50%;"></div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <span>Dietary Needs</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 85%;"></div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div>
+                    <h2>Personality</h2>
+                    <ul class="slider">
+                        
+                        <li>
+                            <div class="slider-labels">
+                                <span>Introvert</span>
+                                <span>Extrovert</span>
+                            </div>
+                            <div class="slider-container">
+                                <div class="slider-thumb" style="left: calc(30% - 8px);"></div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="slider-labels">
+                                <span>Intuition</span>
+                                <span>Sensing</span>
+                            </div>
+                            <div class="slider-container">
+                                <div class="slider-thumb" style="left: calc(85% - 8px);"></div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="slider-labels">
+                                <span>Feeling</span>
+                                <span>Thinking</span>
+                            </div>
+                            <div class="slider-container">
+                                <div class="slider-thumb" style="left: calc(90% - 8px);"></div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="slider-labels">
+                                <span>Perceiving</span>
+                                <span>Judging</span>
+                            </div>
+                            <div class="slider-container">
+                                <div class="slider-thumb" style="left: calc(70% - 8px);"></div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid-layout">
+                <div class="list">
+                    <h2>Behaviour & Habits</h2>
+                    <ul>
+                        <li><strong>Observant and Analytical</strong><br>He notices fine details about his environment, such as the prevalence of car stickers in Lucknow versus Delhi, and analyzes the systems behind social interactions, like how police use civilian agents for bribes.</li><li><strong>Health-Conscious and Proactive</strong><br>Disappointed by the poor quality of paid meals, he takes matters into his own hands by preparing his own "power meals" at home to ensure they are healthy and free from undesirable ingredients like palm oil.</li><li><strong>Seeks Productive Engagement</strong><br>He actively looks for ways to spend his free time productively, showing interest in reading cafes, clubs, and other engaging weekend activities rather than passive leisure.  FRUSTRATIONS</li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h2>Frustrations</h2>
+                    <ul>
+                        <li><strong>Prevalence of "Show-Off" Culture</strong><br>He is irritated by the local culture in Lucknow where individuals frequently display their status and connections (e.g., "adhiwakta," "uttar pradesh sarkar") on their vehicles, which he finds excessive.</li><li><strong>Poor Quality of Local Services</strong><br>The user is frustrated with the low value for money in his new city, citing exorbitant rents despite low demand and expensive meal services that provide "crap quality" food.</li><li><strong>Systemic Corruption</strong><br>He expresses a cynical view of law enforcement based on personal experience, specifically regarding the normalized practice of police using intermediaries to solicit bribes.  GOALS & NEEDS</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="list">
+                <h2>Goals & Needs</h2>
+                <ul>
+                    <li><strong>Find High-Quality Lifestyle Options</strong><br>He needs to find reliable, healthy food services and intellectually stimulating social outlets like a reading cafe to match the standards he is accustomed to.</li><li><strong>Build a Fulfilling Routine</strong><br>As a newcomer to Lucknow for business, he wants to establish a structured and productive weekend routine to make the most of his time in the city.</li><li><strong>Understand the Local Environment</strong><br>He is trying to make sense of the social and cultural norms of Lucknow, frequently comparing them to his experiences growing up in Delhi.  CITED SOURCES</li>
+                </ul>
+            </div>
+            
+            <div class="list">
+                <h2>Cited Sources</h2>
+                <ul>
+                    <li><a href="https://www.reddit.com/r/IndiaUnfilter/comments/1lw6ijt/people_are_smoking_hookah_in_the_middle_of_the/n2vkdpb/" target="_blank" style="word-break: break-all;">https://www.reddit.com/r/IndiaUnfilter/comments/1lw6ijt/people_are_smoking_hookah_in_the_middle_of_the/n2vkdpb/</a></li><li><a href="https://www.reddit.com/r/amiugly/comments/16650bx/deleted_by_user/jyikpuz/" target="_blank" style="word-break: break-all;">https://www.reddit.com/r/amiugly/comments/16650bx/deleted_by_user/jyikpuz/</a></li><li><a href="https://www.reddit.com/r/indiasocial/comments/1lwl70s/a_45_year_old_man_is_harassing_me/n2hx8z7/" target="_blank" style="word-break: break-all;">https://www.reddit.com/r/indiasocial/comments/1lwl70s/a_45_year_old_man_is_harassing_me/n2hx8z7/</a></li><li><a href="https://www.reddit.com/r/lucknow/comments/1lwbwu9/any_tiffin_service_providing_high_quality_food/n2hvomb/" target="_blank" style="word-break: break-all;">https://www.reddit.com/r/lucknow/comments/1lwbwu9/any_tiffin_service_providing_high_quality_food/n2hvomb/</a></li><li><a href="https://www.reddit.com/r/lucknow/comments/1lwbwu9/any_tiffin_service_providing_high_quality_food/n2kh3aq/" target="_blank" style="word-break: break-all;">https://www.reddit.com/r/lucknow/comments/1lwbwu9/any_tiffin_service_providing_high_quality_food/n2kh3aq/</a></li><li><a href="https://www.reddit.com/r/lucknow/comments/1lwyhny/everyone_is_something_in_lko/" target="_blank" style="word-break: break-all;">https://www.reddit.com/r/lucknow/comments/1lwyhny/everyone_is_something_in_lko/</a></li><li><a href="https://www.reddit.com/r/lucknow/comments/1lwyhny/everyone_is_something_in_lko/n2igp7d/" target="_blank" style="word-break: break-all;">https://www.reddit.com/r/lucknow/comments/1lwyhny/everyone_is_something_in_lko/n2igp7d/</a></li><li><a href="https://www.reddit.com/r/lucknow/comments/1lwyhny/everyone_is_something_in_lko/n2ihjjp/" target="_blank" style="word-break: break-all;">https://www.reddit.com/r/lucknow/comments/1lwyhny/everyone_is_something_in_lko/n2ihjjp/</a></li><li><a href="https://www.reddit.com/r/lucknow/comments/1lwyhny/everyone_is_something_in_lko/n2ilsqh/" target="_blank" style="word-break: break-all;">https://www.reddit.com/r/lucknow/comments/1lwyhny/everyone_is_something_in_lko/n2ilsqh/</a></li><li><a href="https://www.reddit.com/r/lucknow/comments/1lx50qm/productive_weekend_activities_in_lko/" target="_blank" style="word-break: break-all;">https://www.reddit.com/r/lucknow/comments/1lx50qm/productive_weekend_activities_in_lko/</a></li><li><a href="https://www.reddit.com/r/lucknow/comments/1lzfhve/what_has_happened_to_malls_like_wave_one_awadh/n34g4ea/" target="_blank" style="word-break: break-all;">https://www.reddit.com/r/lucknow/comments/1lzfhve/what_has_happened_to_malls_like_wave_one_awadh/n34g4ea/</a></li><li><a href="https://www.reddit.com/r/lucknow/comments/1lzuq0r/reading_cafe_reader_club/" target="_blank" style="word-break: break-all;">https://www.reddit.com/r/lucknow/comments/1lzuq0r/reading_cafe_reader_club/</a></li><li><a href="https://www.reddit.com/r/nagpur/comments/1lyb0p5/a_very_odd_experience/n2y7g0s/" target="_blank" style="word-break: break-all;">https://www.reddit.com/r/nagpur/comments/1lyb0p5/a_very_odd_experience/n2y7g0s/</a></li><li><a href="https://www.reddit.com/r/nagpur/comments/1lyb0p5/a_very_odd_experience/n2ybup0/" target="_blank" style="word-break: break-all;">https://www.reddit.com/r/nagpur/comments/1lyb0p5/a_very_odd_experience/n2ybup0/</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

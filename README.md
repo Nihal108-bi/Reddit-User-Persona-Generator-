@@ -6,7 +6,7 @@
 ![Persona HTML Screenshot](output/Extra_Judgment1287_persona.png)
 
 ## 🎥 Watch the Demo
-[![Watch Demo]([https://youtu.be/5WPSBqa9Xww](https://youtu.be/5WPSBqa9Xww))]
+[![Watch Demo]([https://youtu.be/5WPSBqa9Xww])](https://youtu.be/5WPSBqa9Xww)
 
 
 This project is built to **analyze any public Reddit user** and generate a complete **user persona** from their activity using **Google's Gemini 2.5 Pro model**. It generates two types of output:
